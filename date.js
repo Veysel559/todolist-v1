@@ -1,27 +1,27 @@
-module.exports.getDate = getDate;
-//dışa aktarır.
-function getDate() {
-  let today = new Date();
+//jshint esversion:6
 
-  let options = {
+exports.getDate = function() {
+
+  const today = new Date();
+
+  const options = {
     weekday: "long",
     day: "numeric",
-    month: "long",
+    month: "long"
   };
 
   return today.toLocaleDateString("en-US", options);
-}
 
-module.exports.getDay = getDay;
+};
 
-function getDay() {
-  let today = new Date();
+exports.getDay = function () {
 
-  let options = {
-    weekday: "long",
+  const today = new Date();
+
+  const options = {
+    weekday: "long"
   };
 
   return today.toLocaleDateString("en-US", options);
-}
 
-console.log(module.exports);
+};
